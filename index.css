@@ -3,21 +3,121 @@
     margin: 0;
     padding: 0;
 }
-nav {
-    background: #ddd;
+header {
+    background: #868282;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
 }
+/* .menu {
+    display: none;
+    font-size: 40px;
+    color: #3f3f3f;
+    width: 50%;
+    height: auto;
+    position: relative;
+} */
 nav ul {
     display: inline-flex;
     gap: 12px;
 }
-li, a {
+h1, li, a, .dropdown-btn {
     list-style-type: none;
     text-decoration: none;
     text-transform: uppercase;
+    margin-top: 8px;
+    display: inline-block;
+    color: white;
+    font-size: large;
 }
-h1, a {
-    margin: 8px;
-    display: inline-flex;
+li a, .dropdown-btn {
+    padding: 18px  ;
+    border: none;
+    cursor: pointer;
+}
+button {
+    border: none;
+    background:#868282;
+}
+.dropdown {
+    position: relative;
+    display:inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    min-width: 138px;
+    font-size: medium;
+    text-decoration: none;
+    border: 1px solid rgb(80, 79, 79);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.3), 0px 16px 20px 0px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.dropdown-content a {
+    display: grid;
+    grid-template-columns: auto;
+    color: black;
+    margin-left: 6px;
+    margin-top: 0px;
+    gap: 5px;
+}
+.dropdown-content:last-child {
+    border: none;
+}
+li a:hover {
+    background-color: #534f4f;
+}
+.dropdown-btn:hover {
+    background-color: #534f4f;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* background-color: white; */
+}
+/* THE END OF MENU SECTION  */
+
+/* THE BEGINING OF GENERAL SECTION  */
+.grid-container {
+    margin: 1rem;
+    margin-top: 100px;
+}
+.progress {
+    width: 50%;
+    margin: 12px;;
+    background-color: rgb(190, 200, 209);
+    border: none;
+    border-radius: 6px;
+}
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(52, 52, 241, 1);
+    text-align: center;
+}
+.progress-bar1 {
+    width: 80%;
+    height: 30px;
+    background-color: rgba(52, 52, 241, 0.8);
+    text-align: center
+}
+.progress-bar2 {
+    width: 60%;
+    height: 30px;
+    background-color: rgba(52, 52, 241, 0.6);
+    text-align: center
+}
+.progress-bar3 {
+    width: 50%;
+    height: 30px;
+    background-color: rgba(52, 52, 241, 0.2);
+    text-align: center
 }
